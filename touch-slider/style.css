@@ -1,0 +1,52 @@
+body {
+  height: 100%;
+  background-color: #ccc;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  letter-spacing: 0.15em;
+  font-size: 22px;
+}
+
+.slider {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  z-index: 1;
+}
+
+.slides {
+  display: flex;
+  position: relative;
+  top: 0;
+  left: -250px;
+  width: 10000px;
+}
+
+.slides.shifting {
+  transition: left 0.2s ease-out;
+}
+
+.slide {
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 1s;
+  position: relative;
+  background: #ffcf47;
+  border-radius: 2px;
+}
