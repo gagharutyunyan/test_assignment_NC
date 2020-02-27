@@ -57,33 +57,18 @@ const sliderImages = [
 
   const dragEnd = () => {
     posFinal = items.offsetLeft;
+    items.classList.add("shifting");
     if (posFinal - posInitial < -threshold) {
-      shiftSlide(1, "drag");
+      items.style.left = posInitial - slideSize + "px";
+      index++;
+      allowShift = false;
     } else if (posFinal - posInitial > threshold) {
-      shiftSlide(-1, "drag");
+      items.style.left = posInitial + slideSize + "px";
+      index--;
+      allowShift = false;
     } else {
       items.style.left = posInitial + "px";
     }
-  };
-
-  const shiftSlide = (dir, action) => {
-    items.classList.add("shifting");
-
-    if (allowShift) {
-      if (!action) {
-        posInitial = items.offsetLeft;
-      }
-
-      if (dir === 1) {
-        items.style.left = posInitial - slideSize + "px";
-        index++;
-      } else if (dir === -1) {
-        items.style.left = posInitial + slideSize + "px";
-        index--;
-      }
-    }
-
-    allowShift = false;
   };
 
   const checkIndex = () => {
