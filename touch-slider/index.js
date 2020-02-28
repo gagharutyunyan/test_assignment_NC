@@ -31,6 +31,7 @@ const sliderImages = [
     threshold = 100,
     index = 0,
     allowShift = true;
+
   items.appendChild(cloneFirst);
   items.insertBefore(cloneLast, firstSlide);
 
