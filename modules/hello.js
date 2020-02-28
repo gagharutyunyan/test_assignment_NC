@@ -1,3 +1,3 @@
-export const sayHello = user => {
+export const hello = user => {
   return `Hello, ${user}!`;
 };
