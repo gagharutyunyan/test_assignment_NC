@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 1600px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.block {
+  position: relative;
+  width: 720px;
+  height: 720px;
+  background-color: #ccc;
+}
+
+.block.block__css {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 350px;
+  height: 350px;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
