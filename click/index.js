@@ -6,20 +6,20 @@ const arrayOfBlocks = [
   { attribute: "div", bgColor: "blue", className: "block" }
 ];
 
-function blockCreator(attribute, bgColor, className) {
+const blockCreator = (attribute, bgColor, className) => {
   const block = document.createElement(attribute);
   block.classList.add(className);
   block.style.backgroundColor = bgColor;
   blocks.appendChild(block);
-}
+};
 
-function blockRender(blocks, time) {
+const blockRender = (blocks, time) => {
   blocks.map((block, i) => {
     setTimeout(() => {
       blockCreator(block.attribute, block.bgColor, block.className);
     }, time * i);
   });
-}
+};
 
 addElement.addEventListener("click", () => {
   if (!blocks.firstChild) {

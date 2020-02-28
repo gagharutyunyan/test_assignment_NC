@@ -8,7 +8,7 @@ const github = document.querySelector(".github");
 userBlock.classList.add("none");
 loading.classList.remove("none");
 
-async function getUsers(name) {
+const getUsers = async name => {
   let user = fetch(`https://api.github.com/users/${name}`).then(
     successResponse => {
       if (successResponse.status != 200) {
@@ -27,7 +27,7 @@ async function getUsers(name) {
   loading.classList.add("none");
   console.log(results);
   return results;
-}
+};
 
 getUsers("gagharutyunyan").then(res => {
   login.textContent = `Логин ${res.login}`;
